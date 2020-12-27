@@ -1,6 +1,6 @@
 import React from 'react'
 
-const App = () => {
+const Header = () => {
         return(
             <>
             <header class="header">
@@ -61,4 +61,4 @@ const App = () => {
             </>
         )
     }
-    export default App
+    export default Header

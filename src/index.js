@@ -1,4 +1,4 @@
 import ReactDOM from 'react-dom'
-import App from "./app"
+import Header from "./Header"
 
-ReactDOM.render( <App /> , document.getElementById("root"))
+ReactDOM.render( <Header /> , document.getElementById("root"))
