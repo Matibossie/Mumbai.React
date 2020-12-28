@@ -1,4 +1,5 @@
 import React from 'react'
+import SocialMedia from './SocialMedia'
 
 const Header = () => {
         return(
@@ -8,13 +9,11 @@ const Header = () => {
                     <a class="logotipo" href="index.html">
                         <img src="img/logo.jpg" height="150px" alt="Logo"/>   
                     </a>
-                        <div class="social-header">
-                        {/* a target="_blank"  rel="noopener"/> */}
-                            <div class="icon icon-header"><a  href="https://www.instagram.com/mumbai.cuadros/"><img class="icon-social" src="img/icon/instagram.svg" alt="logo-instagram" /></a></div>
-                            <div class="icon icon-header"><a  href="https://www.facebook.com/mumbai.cuadros"><img class="icon-social" src="img/icon/facebook.svg" alt="logo-facebook" /></a></div>
-                            <div class="icon icon-header"><a  href="https://wa.link/1d4ggt"><img class="icon-social" src="img/icon/whatsapp.svg" alt="logo-whatsapp" /></a></div>
-                            <div class="icon icon-header"><a  href="https://open.spotify.com/playlist/5odxXgNcI5NUerGLa0yGD3?si=jtO4ygPZQROUPo_aH6CYCA"><img class="icon-social" src="img/icon/spotify.svg" alt="logo-spotify" /></a></div>
-                        </div>
+
+                    <div class="social-media text-center icon-header">
+                        {/* target="_blank"  rel="noopener" */}
+                        <SocialMedia />
+                    </div>  
                     <div class="carrito"> 
     				    <a href="tienda.html"><img src="img/icon/carrito.jpg" alt="logo-carrito"/></a>
     			    </div>
