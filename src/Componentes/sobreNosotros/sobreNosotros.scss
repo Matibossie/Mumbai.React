@@ -1,0 +1,110 @@
+/** SOBRE NOSOTROS **/
+.contenedor {
+    width: 75%;
+    margin: 3rem auto;
+    margin-bottom: 2rem; }
+    .contenedor .contenido {
+      align-items: center; }
+  
+  .foto-texto {
+    margin: 4rem auto;
+    display: flex; }
+    .foto-texto .contenido {
+      margin: 0 auto;
+      width: 60%; }
+      .foto-texto .contenido h2 {
+        font-size: 2.5rem; }
+  
+  .foto-sobre-nosotros {
+    display: flex; }
+    .foto-sobre-nosotros img {
+      margin: 0 auto;
+      border-radius: 50%;
+      height: 231px; }
+  
+  .foto-sobre-nosotros-index {
+    margin: 2rem auto; }
+  
+  .textos, p {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans Condensed", sans-serif; }
+  
+  .textos h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 2rem; }
+  
+  .textos p {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: justify; }
+  
+  .leer-mas {
+    text-align: end;
+    margin: 1rem auto;
+    transform: translate(72px, 0px); }
+    .leer-mas a {
+      padding: .5rem 1.5rem;
+      background-color: black;
+      border-radius: .5rem;
+      color: #FFF;
+      font-size: 1.5rem;
+      font-family: var(--fuenteSecundaria);
+      text-decoration: none;
+      -webkit-box-shadow: 12px 9px 17px -2px #bababa;
+      -moz-box-shadow: 12px 9px 17px -2px #bababa;
+      box-shadow: 12px 9px 17px -2px #bababa; }
+  
+// Media queries
+@media (min-width: 768px) and (max-width: 1000px) {
+      .foto-sobre-nosotros-index {
+        width: 95%; }
+      .foto-texto {
+        margin: 6rem auto; } }
+      
+@media (min-width: 480px) and (max-width: 768px) {
+    .foto-texto {
+      flex-direction: column; }
+    .foto-texto .contenido {
+      margin: 2rem auto;
+      text-align: justify;
+      width: 90%; } 
+    .textos h2 {
+      text-align: center; }
+    .contenedor {
+      margin-bottom: 0rem; }}
+
+@media (max-width: 479px) {
+    .foto-sobre-nosotros {
+      flex-direction: column};
+    .foto-texto {
+      flex-direction: column; } 
+    .foto-texto .contenido {
+      margin: 2rem auto;
+      text-align: justify;
+      width: 90%; }
+    .foto-texto .contenido h2 {
+      text-align: center; }
+    .textos, p {
+      margin: 2rem 0rem;}
+    .footer-nav .nav {
+      display: flex;
+      flex-direction: column; } }
+
+@media (max-width: 350px) {
+    .foto-sobre-nosotros-index {
+      display: block;
+      text-align: center; }
+    .foto-sobre-nosotros-index img {
+      height: 180px; }
+    .foto-texto {
+      flex-direction: column; }
+      .foto-texto .contenido {
+        margin: 2rem auto;
+        text-align: justify;
+        width: 90%; }
+      .foto-texto .contenido h2 {
+        text-align: center; }
+    }

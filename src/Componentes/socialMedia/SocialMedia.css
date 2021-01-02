@@ -1,0 +1,81 @@
+/** REDES SOCIALES **/
+.social-media {
+  margin-top: 1rem;
+}
+
+.social-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon {
+  margin-right: 1.5rem;
+}
+
+.icon-social {
+  height: 2rem;
+}
+
+.icon-header {
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+.icon-header img {
+  height: 2.8rem;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.icon-header img:hover {
+  background-color: #e2e2e2;
+}
+
+.icon-header .icon {
+  margin-bottom: 0.7rem;
+}
+
+.icon-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.icon-footer .icon a {
+  background-color: white;
+  padding: 7px 3px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.icon-footer img {
+  height: 2rem;
+  display: inline-block;
+  -webkit-transform: translate(0px, -3px);
+          transform: translate(0px, -3px);
+}
+
+.icon-footer .icon:hover a {
+  background-color: #E1E1E1;
+}
+
+.icon-footer:last-of-type {
+  margin: 0;
+}
+/*# sourceMappingURL=SocialMedia.css.map */
