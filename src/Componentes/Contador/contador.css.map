@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,gBAAgB,EAAE,GAAG;EACrB,OAAO,EAAE,WAAW;EACpB,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,QAAQ;EACjB,KAAK,EAAE,KAAK;EACZ,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "contador.scss"
+    ],
+    "names": [],
+    "file": "contador.css"
+}
