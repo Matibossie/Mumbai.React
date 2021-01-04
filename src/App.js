@@ -10,6 +10,9 @@ const App = () => {
 
         const aumentarContador = () => {
             setCantidad(cantidad + 1)  }
+        const restarContador = () => {
+            if (cantidad===0){}else{        
+            setCantidad(cantidad - 1) }  }
         const resetearContador = () => {
             setCantidad(0) }  
 return(
@@ -18,6 +21,7 @@ return(
         <Main Nombre = "Matias"/>
         <Contador 
             cantidad = {cantidad}
+            restarContador = {restarContador}
             aumentarContador = {aumentarContador}
             resetearContador = {resetearContador}
         />
