@@ -6,6 +6,7 @@ import '../sobreNosotros/sobreNosotros.css'
 import '../addClases/utilidades.css'
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav} from 'react-bootstrap';
+import Logo from '../../img/logo.jpg'
 
 const Header = () => {
         return(
@@ -13,7 +14,7 @@ const Header = () => {
             <header className="header">
                <section className="header__logo text-center">
                     <a className="logotipo" href="index.html">
-                        <img src="img/logo.jpg" height="150px" alt="Logo"/>   
+                        <img src={Logo} height="150px" alt="Logo"/>   
                     </a>
                     <div className="social-media text-center icon-header">
                         <SocialMedia />

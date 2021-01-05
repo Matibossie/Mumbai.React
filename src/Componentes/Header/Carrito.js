@@ -1,5 +1,5 @@
 import React from 'react'
-// import App, {Suma} from '../../App'
+import carrito from '../../img/icon/carrito.jpg'
 
 
 function Carrito() {
@@ -7,7 +7,7 @@ function Carrito() {
     <>
     <div className="bloqueCarrito">
         <div className="carrito"> 
-            <a href="tienda.html"><img src='../../icon/carrito.jpg' alt="carrito"/></a>
+            <a href="tienda.html"><img src={carrito} alt="carrito"/></a>
         </div>
         <div>
             {/* <Suma /> */}
