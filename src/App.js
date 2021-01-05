@@ -2,6 +2,7 @@ import React , {useState} from 'react'
 import Header from './Componentes/Header/Header'
 import Contador from './Componentes/Contador/Contador'
 import Main from './Componentes/Main/Main'
+import Catalogo from './Componentes/Catalogo/Catalogo'
 import Footer from './Componentes/Footer/Footer'
 
 const App = () => {
@@ -19,6 +20,7 @@ return(
     <>
         <Header  />
         <Main Nombre = "Matias"/>
+        <Catalogo />
         <Contador 
             cantidad = {cantidad}
             restarContador = {restarContador}

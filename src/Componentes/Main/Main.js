@@ -1,32 +1,5 @@
 import React from 'react'
-import './Main.css'
-
-const promesa = new Promise((resolver, rechazar)=>{
-
-    setTimeout(() => {
-        
-        console.log("termino el pedido")
-
-        let resultado = true
-        let categorias = ["Frases", "Pantone", "Travel", "Lineales"]
-        
-        if(resultado){
-            resolver(categorias)
-        }else{
-            rechazar("Hubo un problema con las categorias")
-        }
-    }, 2000)
-})
-
-promesa
-.then((resultado) =>{
-    console.log("Salio todo bien")
-    console.log(resultado)
-})
-.catch(()=>{
-    console.log("Hubo un error")
-})
-  
+import './Main.css'  
 
 const Main = ({Nombre}) => {
 
