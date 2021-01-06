@@ -1,7 +1,9 @@
 import React , { useEffect, useState } from 'react'
 
-const Catalogo = ({cats}) => {
-    
+const Catalogo = ({}) => {
+
+    const [categorias, setCategorias] = useState([])
+
     useEffect(() => {
         const Categorias = new Promise((resolver, rechazar)=> {
         setTimeout(() => {
@@ -19,7 +21,8 @@ const Catalogo = ({cats}) => {
     Categorias
     .then((resultado) =>{
         console.log("Salio todo bien")
-        console.log(resultado)        
+        console.log(resultado)   
+        setCategorias(categorias)     
         })
     .catch(()=> {
         console.log("Hubo un error")
@@ -31,8 +34,14 @@ const Catalogo = ({cats}) => {
     return (
         <div>
             <h2>Listado de productos</h2>
-                            
-        </div>
+            {Catalogo.length > 0 
+            ? Catalogo.map((Catalogo) => {
+                return (
+                    <p>{categorias}</p>
+                )
+            })
+            : <p> no hay </p>}
+            </div>
     )
 }
 
