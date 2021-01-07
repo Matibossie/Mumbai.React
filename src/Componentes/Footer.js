@@ -1,6 +1,6 @@
 import React from 'react'
-import SocialMedia from '../socialMedia/SocialMedia'
-import './footer.css'
+import SocialMedia from './SocialMedia'
+import '../Clases/footer.css'
 
 function Footer() {
     return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import './SocialMedia.css'
-import Facebook from '../../img/icon/facebook.svg'
-import Instagram from '../../img/icon/instagram.svg'
-import Whatsapp from '../../img/icon/whatsapp.svg'
-import Spotify from '../../img/icon/spotify.svg'
+import '../Clases/SocialMedia.css'
+import Facebook from '../img/icon/facebook.svg'
+import Instagram from '../img/icon/instagram.svg'
+import Whatsapp from '../img/icon/whatsapp.svg'
+import Spotify from '../img/icon/spotify.svg'
 
 
 function SocialMedia() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './contador.css'
+import '../Clases/contador.css'
 
 const Contador = ({cantidad, aumentarContador, resetearContador, restarContador}) => {
     return (
@@ -15,3 +15,4 @@ const Contador = ({cantidad, aumentarContador, resetearContador, restarContador}
     }
     
 export default Contador
+

@@ -1,5 +1,5 @@
 import React from 'react'
-import carrito from '../../img/icon/carrito.jpg'
+import carrito from '../img/icon/carrito.jpg'
 
 
 function Carrito() {
@@ -10,7 +10,7 @@ function Carrito() {
             <a href="tienda.html"><img src={carrito} alt="carrito"/></a>
         </div>
         <div>
-            {/* <Suma /> */}
+   
         </div>
     </div>
     </>

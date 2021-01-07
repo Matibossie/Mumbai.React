@@ -1,12 +1,12 @@
 import React from 'react'
-import SocialMedia from '../socialMedia/SocialMedia'
+import SocialMedia from './SocialMedia'
 import Carrito from './Carrito'
-import './Header.css'
-import '../sobreNosotros/sobreNosotros.css'
-import '../addClases/utilidades.css'
+import '../Clases/Header.css'
+import '../Clases/sobreNosotros.css'
+import '../Clases/utilidades.css'
 import Navbar from 'react-bootstrap/Navbar'
 import { Nav} from 'react-bootstrap';
-import Logo from '../../img/logo.jpg'
+import Logo from '../img/logo.jpg'
 
 const Header = () => {
         return(
