@@ -295,3 +295,20 @@ html {
   .header-resp .container {
     margin: 0 auto;
     padding: 0; }}
+
+
+
+//// CONTENEDOR JSON
+.contenedor-json{
+    display: grid;  
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    margin: 1rem;
+}
+.contenedor-producto {
+  justify-self: center;
+  margin: 0.5rem;
+  }
+    p{
+      margin: 0rem;
+      text-align: center;
+}
