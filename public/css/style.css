@@ -459,7 +459,7 @@
     display: none; }
   .header__logo {
     margin-top: 1rem; }
-    .header__logo .carrito img {
+    .header__logo .carrito a img {
       height: 25px; }
   .logo {
     grid-template-rows: 80% 10% 10%;

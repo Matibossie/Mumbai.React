@@ -1,13 +1,14 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import carrito from '../img/icon/carrito.jpg'
 
 
 function Carrito() {
     return (
     <>
-    <div className="bloqueCarrito">
+    <div className="carrito">
         <div className="carrito"> 
-            <a href="tienda.html"><img src={carrito} alt="carrito"/></a>
+            <NavLink to="/tienda"><img src={carrito} alt="carrito"/></NavLink>
         </div>
         <div>
    
