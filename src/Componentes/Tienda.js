@@ -1,9 +1,12 @@
 import React , {useState, useEffect} from 'react'
-import { NavLink } from 'react-router-dom'
+import { useParams } from  'react-router-dom'
+import Productos from './Productos'
+
 
 const Tienda = () => {
 
     const [productos, setProductos] = useState([])
+    const {id} = useParams()
 
     useEffect(() => {
         const promesa = new Promise((resolver, rechazar) => {
@@ -14,13 +17,26 @@ const Tienda = () => {
         promesa
         .then(res=>res.json())
         .then(res=>{
-            setProductos(res)
+            if(id){
+                setProductos(res.filter(res=>res.categoria===id))
+            }else{
+                setProductos(res)
+            }       
         })
-    },[])
+        .catch(err=>{
+            console.log(err)
+        })
+    },[id])
     
     return (
         <div>
-            <h2 className="text-center">Productos</h2>
+
+            <Productos productos={productos}/>
+
+
+
+            
+{/*             <h2 className="text-center">Productos</h2>
             <div className="contenedor-json">
             {productos.length > 0
             ? productos.map((producto)=>{
@@ -35,7 +51,7 @@ const Tienda = () => {
                 )
             })
             : <p>Cargando productos...</p>}
-            </div>
+            </div> */}
         </div> 
     )
 }

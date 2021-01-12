@@ -4,7 +4,7 @@ import Home from './Home'
 import Tienda from './Tienda'
 import Catalogo from './Catalogo'
 import Nosotros from './Nosotros'
-import Producto from './Producto'
+import Productos from './Productos'
 import '../Clases/Main.css'  
 
 const Main = ({Nombre}) => {
@@ -25,8 +25,8 @@ const Main = ({Nombre}) => {
             <Route path="/Nosotros">
                 <Nosotros/>
             </Route>
-            <Route path="/Producto/:id">
-                <Producto/> 
+            <Route path="/Productos/:id">
+                <Productos/> 
             </Route>
         </Switch>
             {/* <div className="encabezado">
