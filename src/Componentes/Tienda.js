@@ -3,10 +3,11 @@ import { useParams } from  'react-router-dom'
 import Productos from './Productos'
 
 
+
 const Tienda = () => {
 
     const [productos, setProductos] = useState([])
-    const {id} = useParams()
+    const {categoria} = useParams()
 
     useEffect(() => {
         const promesa = new Promise((resolver, rechazar) => {
@@ -17,8 +18,8 @@ const Tienda = () => {
         promesa
         .then(res=>res.json())
         .then(res=>{
-            if(id){
-                setProductos(res.filter(res=>res.categoria===id))
+            if(categoria){
+                setProductos(res.filter(res=>res.categoria===categoria))
             }else{
                 setProductos(res)
             }       
@@ -26,13 +27,12 @@ const Tienda = () => {
         .catch(err=>{
             console.log(err)
         })
-    },[id])
+    },[categoria])
     
     return (
         <div>
-
             <Productos productos={productos}/>
-
+            
         </div> 
     )
 }

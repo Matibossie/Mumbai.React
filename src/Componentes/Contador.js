@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../Clases/contador.css'
 
-const Contador = ({cantidad, aumentarContador, resetearContador, restarContador}) => {
+
+
+const Contador = () => {
+
+    const [cantidad, setCantidad] = useState(0) 
+
+        const aumentarContador = () => {
+            setCantidad(cantidad + 1)  }
+        const restarContador = () => {
+            if (cantidad===0){}else{        
+            setCantidad(cantidad - 1) }  }
+        const resetearContador = () => {
+            setCantidad(0) }  
+
+ 
+        <Contador 
+            cantidad = {cantidad}
+            restarContador = {restarContador}
+            aumentarContador = {aumentarContador}
+            resetearContador = {resetearContador}
+        />
+
+        
     return (
         <div className="text-center">
             <div className="text-center contador">{cantidad}</div>

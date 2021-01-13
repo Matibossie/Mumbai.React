@@ -1,11 +1,13 @@
 import React from 'react'
 
 
-const Home = () => {
+const Home = ({Nombre}) => {
     return (
-        <div>
-            Home
-        </div>
+
+            <div className="encabezado">
+                <h2 className="text-center"><b>¡Hola {Nombre}!</b> <br/>Te invitamos a ver nuestros Productos</h2>
+            </div> 
+
     )
 }
 

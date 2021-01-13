@@ -1,8 +1,8 @@
 import React , {useState, useEffect} from 'react'
 import { useParams } from  'react-router-dom'
-import ItemDetalle from './ItemDetalle'
+import ItemDetail from './ItemDetail'
 
-const DetalleContenedorItem = () => {
+const ItemDetailContainer = () => {
 
     const [producto, setProducto] = useState([])
     const {id} = useParams()
@@ -17,7 +17,7 @@ const DetalleContenedorItem = () => {
         .then(res=>res.json())
         .then(res=>{
             if(id){
-                setProducto(res.filter(res=>res.id===id[0]))
+                setProducto(res.find(res=>res.id===id))
             }       
         })
         .catch(err=>{ 
@@ -28,11 +28,11 @@ const DetalleContenedorItem = () => {
     return (
         <div>
             {producto
-            ? <ItemDetalle producto={producto} />
+            ? <ItemDetail producto={producto} />
             : <p>Cargando productos...</p>
             }
         </div>
     )
 }
 
-export default DetalleContenedorItem
+export default ItemDetailContainer

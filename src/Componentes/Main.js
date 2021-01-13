@@ -4,43 +4,36 @@ import Home from './Home'
 import Tienda from './Tienda'
 import Catalogo from './Catalogo'
 import Nosotros from './Nosotros'
-import Productos from './Productos'
 import '../Clases/Main.css'  
-import DetalleContenedorItem from './DetalleContenedorItem'
+import ItemDetailContainer from './ItemDetailContainer'
 
-const Main = ({Nombre}) => {
+const Main = () => {
 
     return (
         <>
         <main>
+        
         <Switch>
-            <Route path="/" exact >
-                <Home/>
+            <Route exact path="/"  >
+                <Home Nombre = "Matias"/>
             </Route>
-            <Route path="/Tienda">
+            <Route exact path="/tienda" >
                 <Tienda/>
             </Route>
-            <Route path="/Catalogo">
+            <Route exact path="/tienda/:categoria" >
+                <Tienda/>
+            </Route>
+            <Route exact path="/producto/:id" >
+                <ItemDetailContainer/>
+            </Route>
+            <Route exact path="/Catalogo" >
                 <Catalogo/>
             </Route>
-            <Route path="/Nosotros">
+            <Route exact path="/Nosotros" >
                 <Nosotros/>
-            </Route>
-            <Route path="/Tienda/:categoria">
-                <Tienda/> 
-            </Route>
-            <Route path="/">
-                <Tienda/> 
-            </Route>
-            <Route path="/producto/:id">
-                <DetalleContenedorItem/> 
             </Route>
 
         </Switch>
-            {/* <div className="encabezado">
-                <h2 className="text-center"><b>¡Hola {Nombre}!</b> <br/>Te invitamos a ver nuestros Productos</h2>
-            </div> */}
-
         </main>
         </>
     )
