@@ -6,6 +6,7 @@ import Catalogo from './Catalogo'
 import Nosotros from './Nosotros'
 import Productos from './Productos'
 import '../Clases/Main.css'  
+import DetalleContenedorItem from './DetalleContenedorItem'
 
 const Main = ({Nombre}) => {
 
@@ -25,9 +26,16 @@ const Main = ({Nombre}) => {
             <Route path="/Nosotros">
                 <Nosotros/>
             </Route>
-            <Route path="/Productos/:id">
-                <Productos/> 
+            <Route path="/Tienda/:categoria">
+                <Tienda/> 
             </Route>
+            <Route path="/">
+                <Tienda/> 
+            </Route>
+            <Route path="/producto/:id">
+                <DetalleContenedorItem/> 
+            </Route>
+
         </Switch>
             {/* <div className="encabezado">
                 <h2 className="text-center"><b>¡Hola {Nombre}!</b> <br/>Te invitamos a ver nuestros Productos</h2>

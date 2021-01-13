@@ -1,6 +1,6 @@
 import React , {useState, useEffect} from 'react'
 import { useParams } from  'react-router-dom'
-import ItemDetail from './ItemDetail'
+import ItemDetalle from './ItemDetalle'
 
 const DetalleContenedorItem = () => {
 
@@ -18,8 +18,6 @@ const DetalleContenedorItem = () => {
         .then(res=>{
             if(id){
                 setProducto(res.filter(res=>res.id===id[0]))
-            }else{
-                setProducto(res[0])
             }       
         })
         .catch(err=>{ 
@@ -30,8 +28,9 @@ const DetalleContenedorItem = () => {
     return (
         <div>
             {producto
-            ? <ItemDetail producto={producto}/>
-            : <p>Cargando productos...</p>}
+            ? <ItemDetalle producto={producto} />
+            : <p>Cargando productos...</p>
+            }
         </div>
     )
 }

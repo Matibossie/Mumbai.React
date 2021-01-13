@@ -3,7 +3,9 @@ import React from 'react'
 const ItemDetalle = ({producto}) => {
 
     return (
-        <div>
+
+        <div className="container">
+           
             
         </div>
     )

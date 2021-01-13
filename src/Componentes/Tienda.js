@@ -33,25 +33,6 @@ const Tienda = () => {
 
             <Productos productos={productos}/>
 
-
-
-            
-{/*             <h2 className="text-center">Productos</h2>
-            <div className="contenedor-json">
-            {productos.length > 0
-            ? productos.map((producto)=>{
-
-                return(
-                    <div className="contenedor-producto">
-                        <h3>{producto.name}</h3>
-                        <p>${producto.precio}</p>
-                        <NavLink className="text-center" to={`/producto/${producto.id}`}><img src={producto.imagen} alt="alt" height="250px"/></NavLink>
-                        
-                    </div>
-                )
-            })
-            : <p>Cargando productos...</p>}
-            </div> */}
         </div> 
     )
 }
