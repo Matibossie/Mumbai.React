@@ -44,7 +44,7 @@ const Home = ({Nombre}) => {
                                 </div>
                                 <div className="caja-enviar boton boton-wpp">	
                                     <img src="https://i.ibb.co/N6dsJLh/whatsappw.png" alt="logo-whatsapp"/>		
-                                    <a className="send_form" href="/" type="submit" title="Send to Whatsapp">Enviar a Whatsapp</a>
+                                    <NavLink className="send_form" to="/" type="submit" title="Send to Whatsapp">Enviar a Whatsapp</NavLink>
                                 </div>
                                 <div id="text-info"></div>
                             </form>
