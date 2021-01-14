@@ -24,6 +24,8 @@
 }
 
 .header__logo .carrito {
+  -ms-grid-row: 1;
+  grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -76,5 +78,49 @@
 
 button.navbar-toggler {
   outline: none;
+}
+
+.dropdown-item {
+  padding: 0rem;
+}
+
+a.dropdown-item {
+  font-size: 1.7rem;
+  margin: 0rem;
+  text-align: center;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0rem;
+}
+
+.dropdown-item:hover {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+/** TIENDA **/
+.header__logo .carrito {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carrito {
+  height: 45px;
+  margin-left: 2rem;
 }
 /*# sourceMappingURL=Header.css.map */

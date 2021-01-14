@@ -4,6 +4,7 @@ import Home from './Home'
 import Tienda from './Tienda'
 import Catalogo from './Catalogo'
 import Nosotros from './Nosotros'
+import Checkout from './Checkout'
 import '../Clases/Main.css'  
 import ItemDetailContainer from './ItemDetailContainer'
 
@@ -13,9 +14,9 @@ const Main = () => {
         <>
         <main>
         
-        <Switch>
+        <Switch> 
             <Route exact path="/"  >
-                <Home Nombre = "Matias"/>
+                <Home Nombre = "Horacio"/>
             </Route>
             <Route exact path="/tienda" >
                 <Tienda/>
@@ -32,7 +33,9 @@ const Main = () => {
             <Route exact path="/Nosotros" >
                 <Nosotros/>
             </Route>
-
+            <Route>
+                <Checkout />
+            </Route>
         </Switch>
         </main>
         </>

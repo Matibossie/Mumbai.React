@@ -13,7 +13,7 @@ const Productos = ({productos}) => {
                 )
             })
             : <p>Cargando productos...</p>}
-        </div>
+            </div>
     )
 }
 

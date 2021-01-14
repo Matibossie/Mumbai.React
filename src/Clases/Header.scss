@@ -10,6 +10,7 @@
     .header__logo .logotipo {
       grid-column: 2/3; }
     .header__logo .carrito {
+      grid-row: 1;
       grid-column: 1/2; }
   
   .header-nav {
@@ -48,3 +49,36 @@
     button.navbar-toggler{
       outline: none;
     }
+    .dropdown-item{
+      padding: 0rem;
+    }
+    a.dropdown-item {
+      font-size: 1.7rem;
+      margin: 0rem;
+      text-align: center;
+  }
+  .dropdown-toggle::after{
+    display: none;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0rem;
+  }
+  .dropdown-item:hover{
+    background-color: transparent;
+  }
+  .dropdown-menu{
+    border: none;
+  }
+  
+/** TIENDA **/
+.header__logo .carrito {
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center; }
+  
+//Carrito
+#carrito {
+  height: 45px;
+  margin-left: 2rem; }
+  
+//Navbar

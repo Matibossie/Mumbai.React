@@ -2,8 +2,7 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import SocialMedia from './SocialMedia'
 import Carrito from './Carrito'
-import Navbar from 'react-bootstrap/Navbar'
-import { Nav} from 'react-bootstrap';
+import {Navbar , Nav, NavDropdown } from 'react-bootstrap'
 import Logo from '../img/logo.jpg'
 import '../Clases/Header.css'
 import '../Clases/sobreNosotros.css'
@@ -28,13 +27,29 @@ const Header = () => {
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className=" mr-auto text-center">
                                 <li><NavLink to="/" exact>Inicio</NavLink></li>
-                                <li><NavLink to="/tienda">Tienda</NavLink></li>
+                                <li>
+                                <NavDropdown title="Tienda" id="collasible-nav-dropdown">
+                                    <NavDropdown.Item>  <NavLink to="/tienda" exact>Todos</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Home" exact>Home</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Baby" exact>Baby</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Movies" exact>Movies</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Music" exact>Music</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Games" exact>Games</NavLink></NavDropdown.Item>
+                                    <NavDropdown.Item><NavLink to="/tienda/Shoes" exact>Shoes</NavLink></NavDropdown.Item>
+                                </NavDropdown> 
+                                </li> 
                                 <li><NavLink to="/catalogo">Catálogo</NavLink></li>
                                 <li><NavLink to="/nosotros">Sobre Nosotros</NavLink></li>
-                                <li><NavLink to="/contactanos">Contactanos</NavLink></li>
+                                <li><NavLink to="/">Contactanos</NavLink></li>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
+                                    
+                           
+
+
+
+
                 </section>
             </header>
             </>

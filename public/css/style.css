@@ -3,14 +3,9 @@
 
 
 
-/** TIENDA **/
-.header__logo .carrito {
-  grid-row: 1/2;
-  display: flex;
-  justify-content: center; }
-  .header__logo .carrito a img {
-    height: 45px;
-    margin-left: 2rem; }
+
+
+
 
 /** SLIDER TIENDA **/
 .caja {

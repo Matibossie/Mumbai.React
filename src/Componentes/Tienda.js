@@ -4,6 +4,7 @@ import Productos from './Productos'
 
 
 
+
 const Tienda = () => {
 
     const [productos, setProductos] = useState([])
@@ -32,7 +33,6 @@ const Tienda = () => {
     return (
         <div>
             <Productos productos={productos}/>
-            
         </div> 
     )
 }
