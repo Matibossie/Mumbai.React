@@ -3,33 +3,52 @@ import '../Clases/contador.css'
 
 
 
-const Contador = () => {
+const Contador = ({stock, inicial}) => {
 
-    const [cantidad, setCantidad] = useState(0) 
+    const [cantidad, setCantidad] = useState(inicial) 
 
         const aumentarContador = () => {
-            setCantidad(cantidad + 1)  }
+            if(cantidad < stock ) {
+                setCantidad(cantidad + 1)  
+            }
+        }
         const restarContador = () => {
-            if (cantidad===0){}else{        
-            setCantidad(cantidad - 1) }  }
-        const resetearContador = () => {
-            setCantidad(0) }  
+            if (cantidad > 0){
+                setCantidad(cantidad - 1)
+            }
+        }
+        
 
+        /* 
  
         <Contador 
             cantidad = {cantidad}
             restarContador = {restarContador}
             aumentarContador = {aumentarContador}
             resetearContador = {resetearContador}
-        />
+        /> */
+
+
+        const onAdd = () => {
+
+        }
+
 
         
     return (
         <div className="text-center">
-            <div className="text-center contador">{cantidad}</div>
-            <button className="boton next" onClick={ aumentarContador }> Agregar Item </button>
-            <button className="boton next" onClick={ resetearContador }> Reset </button>
-            <button className="boton next" onClick={ restarContador }> Quitar Item </button>
+            <p> Stock : {stock} </p>
+            <button  onClick={aumentarContador} className={`boton next ${cantidad === stock ? "disabled" : null}`} > 
+                + 
+            </button>
+            <div 
+                className="text-center contador">{cantidad}    
+            </div>
+            <button onClick={restarContador} className={`boton next ${cantidad === 0 ? "disabled" : null}`}> 
+                - 
+            </button>
+
+            <button onClick={onAdd} className="boton next" > Agregar al carrito </button>
         </div>
 
 
