@@ -1,10 +1,13 @@
 import React from 'react'
 import Contador from './Contador'
 
+const cambiarValor = () => {
+    console.log ("cambio el valor")
+}
+
 
 const ItemDetail = ({producto}) => {
-
-    
+  
 
     return (
         <div className="contenedor text-center">
