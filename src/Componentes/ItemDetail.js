@@ -57,6 +57,7 @@ const ItemDetail = ({producto,id,name,precio,detalle,imagen,categoria,stock, ini
                     producto={producto}
                 />
             </div>
+
         </div>
     )
 }

@@ -8,6 +8,8 @@ import Checkout from './Checkout'
 import '../Clases/Main.css'  
 import ItemDetailContainer from './ItemDetailContainer'
 
+
+
 const Main = () => {
 
     return (
