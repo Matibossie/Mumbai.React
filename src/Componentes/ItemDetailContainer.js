@@ -28,7 +28,17 @@ const ItemDetailContainer = () => {
     return (
         <div>
             {producto
-            ? <ItemDetail producto={producto} />
+            ? <ItemDetail 
+            producto={producto}
+            id={producto.id}
+            name={producto.name}
+            precio={producto.precio}
+            detalle={producto.detalle}
+            imagen={producto.imagen}
+            categoria={producto.categoria}
+            stock={10}
+            inicial={1}
+             />
             : <p>Cargando productos...</p>
             }
         </div>
