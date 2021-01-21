@@ -1,18 +1,12 @@
 import React from 'react'
 import ProductoIndividual from './ProductoIndividual'
 
-const Productos = ({productos}) => {
+const Productos = ({items}) => {
 
     return (
         <div className="contenedor-json">
-            {productos.length > 0
-            ? productos.map(res=>{
-                
-                return (
-                    <ProductoIndividual key={res.id} id={res.id} name={res.name} precio={res.precio} imagen={res.imagen}/> 
-                )
-            })
-            : <p>Cargando productos...</p>}
+            { items.map(product=> <ProductoIndividual key={product.id} id={product.id} name={product.name} precio={product.precio} imagen={product.imagen}/>)
+            }
             </div>
     )
 }

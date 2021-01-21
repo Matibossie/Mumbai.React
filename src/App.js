@@ -4,16 +4,15 @@ import Header from './Componentes/Header'
 import Main from './Componentes/Main'
 import Footer from './Componentes/Footer'
 
-
 const App = () => {
 
     
 return(
-    <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-    </BrowserRouter>  
+        <BrowserRouter>
+            <Header />
+            <Main />
+            <Footer />
+        </BrowserRouter>
     )
 }
 
