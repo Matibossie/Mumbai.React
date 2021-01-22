@@ -1,16 +1,9 @@
 import React, { useState } from 'react'
 import Contador from './Contador'
 
-const ItemDetail = ({producto,id,name,precio,detalle,imagen,categoria,stock, inicial}) => {    
+const ItemDetail = ({ item, id, name, image, description, stock, initial, price}) => {    
 
-// Este estado lo voy a usar para ir chequeando la cantidad de productos
-    const [cantidad, setCantidad] = useState(inicial) 
-
-// En este estado voy a guardar la información (producto y cantidad) cuando se cliquea "Agregar al Carrito"
-    const [ cart, setCart ] = useState([])
-
-// Este estado me va a servir para manejar si debo mostrar el botón "Agregar al carrito" o "terminar compra"
-    const [ open, setOpen ] = useState(false)
+const [cantidad, setCantidad] = useState(initial) 
 
     const aumentarContador = () => {
         if(cantidad < stock ) {
@@ -18,14 +11,21 @@ const ItemDetail = ({producto,id,name,precio,detalle,imagen,categoria,stock, ini
         }
         else{ console.log("llegamos al stock")}
     }
+
     const restarContador = () => {
-        if (cantidad > inicial){
+        if (cantidad > initial){
             setCantidad(cantidad - 1)
         }
         else{ console.log("hay un solo item")}
     }
 
-    // Cuando el usuario agrega al carrito voy a hacer dos cosas
+    /* // En este estado voy a guardar la información (producto y cantidad) cuando se cliquea "Agregar al Carrito"
+    
+
+// Este estado me va a servir para manejar si debo mostrar el botón "Agregar al carrito" o "terminar compra"
+     */
+
+/*     // Cuando el usuario agrega al carrito voy a hacer dos cosas
     function agregarAlCarrito(producto) {
 
         console.log("Estas agregando " + cantidad + " al carrito")
@@ -34,27 +34,25 @@ const ItemDetail = ({producto,id,name,precio,detalle,imagen,categoria,stock, ini
         
         // Guardo en el estado que open sea true para mostrar "Terminar Compra" en lugar de "Agregar al carrito"
         setOpen(true)
-    }
+    } */
 
     return (
         <div className="contenedor text-center">
             <div className="producto">
-                <h6>Categoría: {producto.categoria}</h6>
-                <h2>{producto.name}</h2>
-                <h3>${producto.precio}</h3>
-                <img src={producto.imagen} alt=""/>
-                <h6>{producto.detalle}</h6>
+                <h6>Categoría: {item.categoryId}</h6>
+                <h2>{item.name}</h2>
+                <h3>${item.price}</h3>
+                <img src={item.image} alt=""/>
+                <h6>{item.description}</h6>
             </div>    
             <div>
                 <Contador 
-                    stock={producto.stock} 
-                    inicial={1} 
+                    stock={item.stock} 
+                    initial={initial} 
                     aumentarContador={aumentarContador}
                     restarContador={restarContador}
                     cantidad={cantidad}
-                    open={open}
-                    agregarAlCarrito={agregarAlCarrito}
-                    producto={producto}
+                    item={item}
                 />
             </div>
 

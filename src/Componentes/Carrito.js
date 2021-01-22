@@ -8,7 +8,7 @@ function Carrito() {
     <>
     <div className="carrito">
         <div className="carrito"> 
-            <NavLink to="/Checkout"><img src={carrito} id="carrito" alt="carrito"/></NavLink>
+            <NavLink to="/cart"><img src={carrito} id="carrito" alt="carrito"/></NavLink>
         </div>
         <div>
    

@@ -8,6 +8,18 @@ import '../Clases/Header.css'
 import '../Clases/sobreNosotros.css'
 import '../Clases/utilidades.css'
 
+const categories = [{
+    categoryId: "Botanica",
+    name: "Cuadro 1"
+},
+{
+    categoryId: "Viajes",
+    name: "Cuadro 2"
+},{
+    categoryId: "Lineales",
+    name: "Cuadro 3"
+}]
+
 const Header = () => {
         return(
             <>
@@ -19,28 +31,23 @@ const Header = () => {
                     <div className="social-media text-center icon-header">
                         <SocialMedia />
                     </div>  
-                        <Carrito />
+                        <NavLink to={"/cart"}> <Carrito /> </NavLink>
                 </section>
                 <section className="header__navegacion">
                     <Navbar collapseOnSelect expand="lg" >
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                             <Navbar.Collapse id="responsive-navbar-nav">
                                 <Nav className=" mr-auto text-center">
-                                <li><NavLink to="/" exact>Inicio</NavLink></li>
+                                <li><NavLink to="/Home" exact>Inicio</NavLink></li>
                                 <li>
                                 <NavDropdown title="Tienda" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item>  <NavLink to="/tienda" exact>Todos</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Home" exact>Home</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Baby" exact>Baby</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Movies" exact>Movies</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Music" exact>Music</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Games" exact>Games</NavLink></NavDropdown.Item>
-                                    <NavDropdown.Item><NavLink to="/tienda/Shoes" exact>Shoes</NavLink></NavDropdown.Item>
+                                      <NavLink to="/" exact>Todos</NavLink>
+                                    { categories.map ( category => <NavLink to={`/category/${category.categoryId}`}>{category.categoryId}</NavLink>) } 
                                 </NavDropdown> 
                                 </li> 
                                 <li><NavLink to="/catalogo">Catálogo</NavLink></li>
                                 <li><NavLink to="/nosotros">Sobre Nosotros</NavLink></li>
-                                <li><NavLink to="/">Contactanos</NavLink></li>
+                                <li><NavLink to="/Home">Contactanos</NavLink></li>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>

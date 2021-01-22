@@ -1,13 +1,14 @@
 import React from 'react'
 import ProductoIndividual from './ProductoIndividual'
 
-const Productos = ({items}) => {
+const Productos = ({products}) => {
 
     return (
         <div className="contenedor-json">
-            { items.map(product=> <ProductoIndividual key={product.id} id={product.id} name={product.name} precio={product.precio} imagen={product.imagen}/>)
-            }
-            </div>
+            { products.map ( product => <ProductoIndividual key={product.id} id={product.id} 
+                name={product.name} image={product.image} price={product.price}/>)
+                }
+        </div>
     )
 }
 
