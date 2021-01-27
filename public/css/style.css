@@ -1,10 +1,69 @@
 
 
 
+.header__logo a{
+  grid-row: 1;
+}
+.BloqueItems{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 2rem;
+}
+.ImagenItem{
+  position: relative;
+}
+.EliminarItem{
+  position: absolute;
+  margin-left: -2rem;
+  margin-top: 0.5rem;
+}
+.TituloCart{
+  margin-bottom: 2rem;
+}
+.BotonTienda {
+  display: inline;
+  justify-content: center;
+  margin: 1rem 0.5rem;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+}
 
+.BotonTienda a{
+  color: white;
+}
+.BotonTienda:hover {
+  background: rgb(53, 53, 53);
+}
+.BotonTienda:hover a {
+  text-decoration: none;
+}
 
+.segunda{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
 
+.margin{
+  margin: 0.5rem;
+}
+button.botonContador{
+  background: transparent;
+  border: none;
+  outline: none;
+}
 
+.SumaCarro{
+  background: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  justify-content: center;
+  font-weight: bold;
+}
 
 
 /** SLIDER TIENDA **/
