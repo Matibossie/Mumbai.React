@@ -10,50 +10,48 @@ import Catalogo from './Componentes/Catalogo'
 import Nosotros from './Componentes/Nosotros'
 import Cart from './Componentes/Cart'
 import CartProvider from '../src/Componentes/CartContext'
+import { firestore } from './firebaseConfig'
 
-const products = [{
-    id: 1,
-    name: "Cuadro 1",
-    price: "1000",
-    image: "https://i.ibb.co/C96R3sn/imagen-21.jpg",
-    description: "Primero cuadro de nuestra coleccion",
-    stock: 9,
-    initial: 1,
-    categoryId: "Botanica",
-  },{
-    id: 2,
-    name: "Cuadro 2",
-    price: "1100",
-    image: "https://i.ibb.co/nsW7m7P/imagen-91.jpg",
-    description: "Segundo cuadro de nuestra coleccion",
-    stock: 5,
-    initial: 1,
-    categoryId: "Viajes",
-  },{
-    id: 3,
-    name: "Cuadro 3",
-    price: "1200",
-    image: "https://i.ibb.co/VMrz4kC/imagen-41.jpg",
-    description: "Tercer cuadro de nuestra coleccion",
-    stock: 6,
-    initial: 1,
-    categoryId: "Lineales",
-  }
-  ]
 
 const App = () => {
 
     const [ items, setItems] = useState([])
 
     useEffect(() => {
-        const promesa = new Promise((resolver, rechazar) => {
-            setTimeout(function(){
-                resolver(products)
-            }, 2000);
+      const db = firestore
+      const collection = db.collection("items")
+      const query = collection.get()
+      
+      query.then((resultado)=>{
+        
+        const items_array = resultado.docs
+
+        items_array.forEach(item=>{
+            
+            const producto_final = {
+                id : item.id,
+                ...item.data()
+            }
+            setItems([...items, producto_final])
         })
-        promesa.then(result => setItems (result))
-        promesa.catch(err=> console.log("Algo salio mal"))
-    },[]);
+    })
+      .catch(()=>{ 
+          console.log("fallo")
+      })
+
+    },[])
+
+    
+
+    // useEffect(() => {
+    //     const promesa = new Promise((resolver, rechazar) => {
+    //         setTimeout(function(){
+    //             resolver(products)
+    //         }, 2000);
+    //     })
+    //     promesa.then(result => setItems (result))
+    //     promesa.catch(err=> console.log("Algo salio mal"))
+    // },[]);
 
 return(
     <CartProvider>
