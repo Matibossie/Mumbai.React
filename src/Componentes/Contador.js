@@ -27,12 +27,27 @@ const Contador = ({item, id, aumentarContador, restarContador, cantidad}) => {
                 <button   className="BotonTienda" onClick={ () => addAndOpen(item, cantidad, id)}>
                   <h3>Agregar al carrito </h3>
                 </button>
-            </div>) : 
-            (<NavLink to="/Cart">
+            </div>) :
+
+            (
+            
+            <>
+            <NavLink to="/Cart">
                 <button  className="BotonTienda" >
                     <h3>Terminar la compra</h3>
                 </button>
-            </NavLink>) }
+            </NavLink>
+            <NavLink to="/">
+                <button  className="BotonTienda" >
+                    <h3>Seguir Comprando</h3>
+                </button>
+            </NavLink>
+            </>
+            ) 
+            
+            
+            
+            }
         </div>
     )
 }

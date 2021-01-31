@@ -1,6 +1,7 @@
 import React , {useState, useEffect} from 'react'
 import Productos from './Productos'
 import { useParams } from  'react-router-dom'
+import { firestore } from '../firebaseConfig'
 
 const Tienda = ( {products} ) => {
 
@@ -10,12 +11,23 @@ const Tienda = ( {products} ) => {
 
     useEffect(() => {
         if(id){
-            const category = products.filter(product => product.categoryId === id)
-            setItems(category)
+
+            const db = firestore
+            const collection = db.collection("items")
+            const query = collection.where('categoryId', '==', id).get()
+
+            query
+                .then( (i) => {
+                    setItems(i.docs.map(p => ({id: p.id, ...p.data()})))
+            })
+                .catch((error) => {
+                    console.log(error)
+                })
+        }
+        else{
+            setItems(products)
             }
-            else{
-                setItems(products)
-            }
+
         }, [id, products])
     
     return (

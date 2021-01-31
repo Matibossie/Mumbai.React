@@ -3,12 +3,12 @@ import "firebase/firestore";
 
 
 const miConfiguracion = {
-    apiKey: "AIzaSyBf_31iIOB-cnkLoBbxjcaIg7J0mW45nWA",
-    authDomain: "mumbai-react-8332b.firebaseapp.com",
-    projectId: "mumbai-react-8332b",
-    storageBucket: "mumbai-react-8332b.appspot.com",
-    messagingSenderId: "329956722936",
-    appId: "1:329956722936:web:b09b1e96d6473bd5da130d" 
+    apiKey: "AIzaSyAQ69i0sMfwLa66OOVzQrUqaK3VBAEI1_I",
+    authDomain: "mumbai-87fd1.firebaseapp.com",
+    projectId: "mumbai-87fd1",
+    storageBucket: "mumbai-87fd1.appspot.com",
+    messagingSenderId: "975758460622",
+    appId: "1:975758460622:web:b707a31965514d34fdf29f"
 }
 
 

@@ -19,22 +19,6 @@ const [cantidad, setCantidad] = useState(initial)
         else{ console.log("hay un solo item")}
     }
 
-    /* // En este estado voy a guardar la información (producto y cantidad) cuando se cliquea "Agregar al Carrito"
-    
-
-// Este estado me va a servir para manejar si debo mostrar el botón "Agregar al carrito" o "terminar compra"
-     */
-
-/*     // Cuando el usuario agrega al carrito voy a hacer dos cosas
-    function agregarAlCarrito(producto) {
-
-        console.log("Estas agregando " + cantidad + " al carrito")
-        // Guardo en el estado cart el producto que eligió y la cantidad
-        setCart(...cart, { id: producto.id, amount: cantidad })
-        
-        // Guardo en el estado que open sea true para mostrar "Terminar Compra" en lugar de "Agregar al carrito"
-        setOpen(true)
-    } */
 
     return (
         <div className="contenedor text-center">

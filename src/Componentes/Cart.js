@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { CartContext } from './CartContext'
 import CartItem from './CartItem'
-
+import Form from './Form'
 
 const Cart = () => {
     const { cart, clearCart, total } = useContext(CartContext)
@@ -39,13 +39,9 @@ const Cart = () => {
             <>
             <h3>Precio total del carrito: ${total}</h3>
             <div>
-            <button className="BotonTienda" ><NavLink to="/">Seguir comprando</NavLink></button>
-                <button className=" BotonTienda" onClick={clearCart}>
-                    Vaciar Carrito
-                </button>
-                <button className=" BotonTienda" onClick={() => {console.log(cart)}}> 
-                    Terminar Compra
-                </button>
+                <button className="BotonTienda"><NavLink to="/">Seguir comprando</NavLink></button>
+                <button className="BotonTienda" onClick={clearCart}>Vaciar Carrito</button>
+                <button className="BotonTienda" onClick={()=>console.log(cart)}><NavLink to="/Form">Terminar Compra</NavLink></button>
             </div>
             </>}
         </div>

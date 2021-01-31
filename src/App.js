@@ -11,6 +11,7 @@ import Nosotros from './Componentes/Nosotros'
 import Cart from './Componentes/Cart'
 import CartProvider from '../src/Componentes/CartContext'
 import { firestore } from './firebaseConfig'
+import ProductoIndividual from './Componentes/ProductoIndividual'
 
 
 const App = () => {
@@ -18,40 +19,36 @@ const App = () => {
     const [ items, setItems] = useState([])
 
     useEffect(() => {
+
       const db = firestore
       const collection = db.collection("items")
       const query = collection.get()
       
-      query.then((resultado)=>{
-        
-        const items_array = resultado.docs
-
-        items_array.forEach(item=>{
+      query
+        .then(({docs}) => {
             
-            const producto_final = {
-                id : item.id,
-                ...item.data()
+            setItems(docs.map(doc=>({id: doc.id,...doc.data()})))
+
+
+
+            
+            /* const arr = []
+
+            docs.forEach(doc=>{
+                
+            const nuevoDoc = {
+                id : doc.id, ...doc.data()
             }
-            setItems([...items, producto_final])
+
+            arr.push(nuevoDoc)
+            })
+
+            setItems(arr) */
         })
-    })
-      .catch(()=>{ 
-          console.log("fallo")
-      })
-
+        .catch(() =>{
+            console.log('fallo')
+        })
     },[])
-
-    
-
-    // useEffect(() => {
-    //     const promesa = new Promise((resolver, rechazar) => {
-    //         setTimeout(function(){
-    //             resolver(products)
-    //         }, 2000);
-    //     })
-    //     promesa.then(result => setItems (result))
-    //     promesa.catch(err=> console.log("Algo salio mal"))
-    // },[]);
 
 return(
     <CartProvider>
@@ -79,7 +76,7 @@ return(
                 <Route exact path="/Cart">
                     <Cart />
                 </Route>
-            </Switch>
+            </Switch> 
             <Footer />
         </BrowserRouter>
     </CartProvider>

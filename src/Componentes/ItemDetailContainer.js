@@ -47,6 +47,7 @@ const ItemDetailContainer = () => {
         item.get()
             .then( (i) => {
                setItem({ id: i.id, ...i.data()})
+               
         })
 
     }, [id])
