@@ -68,6 +68,8 @@
   }
   .dropdown-menu{
     border: none;
+    background-color: #cacaca;
+    padding: 0rem;
   }
   
 /** TIENDA **/
@@ -76,9 +78,21 @@
   display: flex;
   justify-content: center; }
   
+  .custom-control, .custom-switch{
+    padding: 0rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+
 //Carrito
 #carrito {
   height: 45px;
-  margin-left: 2rem; }
-  
+  }
+.cartLogo{
+  position: relative;
+  justify-self: right;
+}
+.cuentaCuadros{
+  margin: 1rem 0rem 0rem -1rem;
+}
 //Navbar

@@ -397,10 +397,53 @@ button.navbar-toggler {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 p {
   margin: 0rem;
   text-align: center;
+}
+
+.titulo {
+  position: absolute;
+  background-color: yellow;
+  padding: 0.5rem 1rem;
+  outline: auto;
+  -webkit-transform: translate(-2rem, 1rem);
+          transform: translate(-2rem, 1rem);
+  font-size: 1.3rem;
+}
+
+.precio {
+  position: absolute;
+  background-color: yellow;
+  padding: 0.2rem 1.7rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  -webkit-transform: translate(15rem, 18rem);
+          transform: translate(15rem, 18rem);
+  outline: auto;
+}
+
+.contenedor.text-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.preCompra {
+  width: 80%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=utilidades.css.map */

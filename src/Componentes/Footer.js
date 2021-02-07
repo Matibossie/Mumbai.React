@@ -9,7 +9,7 @@ function Footer() {
         <footer className="contenedor-footer">
             <div className="footer-nav text-center">
                 <nav className="nav">
-                <li><NavLink to="/" exact>Inicio<span className="separador">&nbsp;-&nbsp;</span></NavLink></li>
+                <li><NavLink to="/home" exact>Inicio<span className="separador">&nbsp;-&nbsp;</span></NavLink></li>
                 <li><NavLink to="/tienda">Tienda<span className="separador">&nbsp;-&nbsp;</span></NavLink></li>
                 <li><NavLink to="/catalogo">Catálogo<span className="separador">&nbsp;-&nbsp;</span></NavLink></li>
                 <li><NavLink to="/nosotros">Sobre nosotros<span className="separador">&nbsp;-&nbsp;</span></NavLink></li>

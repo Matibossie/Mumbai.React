@@ -104,6 +104,8 @@ a.dropdown-item {
 
 .dropdown-menu {
   border: none;
+  background-color: #cacaca;
+  padding: 0rem;
 }
 
 /** TIENDA **/
@@ -119,8 +121,23 @@ a.dropdown-item {
           justify-content: center;
 }
 
+.custom-control, .custom-switch {
+  padding: 0rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
 #carrito {
   height: 45px;
-  margin-left: 2rem;
+}
+
+.cartLogo {
+  position: relative;
+  -ms-grid-column-align: right;
+      justify-self: right;
+}
+
+.cuentaCuadros {
+  margin: 1rem 0rem 0rem -1rem;
 }
 /*# sourceMappingURL=Header.css.map */

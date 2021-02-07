@@ -19,29 +19,33 @@ const Contador = ({item, id, aumentarContador, restarContador, cantidad}) => {
         <div className="primera">
             <div className="segunda">
                 <button className="botonContador margin" onClick={restarContador}>-</button>
-                    <h3  className="margin">{cantidad}</h3>
+                    <h3  className="margin cantidadContador">{cantidad}</h3>
                 <button className="botonContador margin" onClick={aumentarContador}>+</button>
             </div>
             { /* Si open es false, que se muestre Agregar al Carrito, pero si es true, Terminar la compra*/}
             { !open ? (<div className="tercera">
                 <button   className="BotonTienda" onClick={ () => addAndOpen(item, cantidad, id)}>
-                  <h3>Agregar al carrito </h3>
+                <h3>Agregar al carrito</h3>
                 </button>
             </div>) :
 
             (
             
             <>
-            <NavLink to="/Cart">
+           <div className="flex">
                 <button  className="BotonTienda" >
-                    <h3>Terminar la compra</h3>
+                <NavLink to="/Cart">
+                    <h4>Terminar la compra</h4>
+                </NavLink>
                 </button>
-            </NavLink>
-            <NavLink to="/">
+            
+            
                 <button  className="BotonTienda" >
-                    <h3>Seguir Comprando</h3>
+                <NavLink to="/tienda">
+                    <h4>Seguir Comprando</h4>
+                </NavLink>
                 </button>
-            </NavLink>
+                </div>
             </>
             ) 
             

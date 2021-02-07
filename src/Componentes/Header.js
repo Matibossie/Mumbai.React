@@ -9,29 +9,31 @@ import '../Clases/sobreNosotros.css'
 import '../Clases/utilidades.css'
 
 const categories = [{
-    categoryId: "Botanica",
-    name: "Cuadro 1"
+    categoryId: "Viajes",
 },
 {
-    categoryId: "Viajes",
-    name: "Cuadro 2"
+    categoryId: "Novedades",
 },{
-    categoryId: "Lineales",
-    name: "Cuadro 3"
+    categoryId: "Infantiles",
 }]
 
 const Header = () => {
+    
         return(
             <>
             <header className="header">
                <section className="header__logo text-center">
-                    <NavLink className="logotipo" to="/" exact >
-                        <img src={Logo} height="150px" alt="Logo"/>   
-                    </NavLink>
+                   <div className="logotipo">
+                        <NavLink className="logotipo" to="/" exact >
+                            <img src={Logo} height="150px" alt="Logo"/>   
+                        </NavLink>
+                    </div>
                     <div className="social-media text-center icon-header">
                         <SocialMedia />
                     </div>  
-                        <NavLink to={"/cart"}> <Carrito /> </NavLink>
+                    <div className="carrito cartLogo">
+                        <Carrito />
+                    </div>
                 </section>
                 <section className="header__navegacion">
                     <Navbar collapseOnSelect expand="lg" >
@@ -41,7 +43,7 @@ const Header = () => {
                                 <li><NavLink to="/Home" exact>Inicio</NavLink></li>
                                 <li>
                                 <NavDropdown title="Tienda" id="collasible-nav-dropdown">
-                                      <NavLink to="/" exact>Todos</NavLink>
+                                      <NavLink to="/tienda" exact>Todos</NavLink>
                                     { categories.map ( category => <NavLink to={`/category/${category.categoryId}`}>{category.categoryId}</NavLink>) } 
                                 </NavDropdown> 
                                 </li> 

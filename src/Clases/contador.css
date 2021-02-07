@@ -1,13 +1,15 @@
 .contador {
-  background-color: red;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  border-radius: 50%;
-  padding: 4px 17px;
-  color: white;
-  font-weight: 700;
-  font-size: 30px;
+  background: red;
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  text-align: center;
+  width: 1.6em;
+  font-size: 15px;
 }
 
 .contador input {
@@ -16,5 +18,50 @@
   background: transparent;
   width: 50px;
   height: 70px;
+}
+
+.segunda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+button.botonContador {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  padding: 0rem 1rem;
+  font-weight: bold;
+  outline: none;
+}
+
+.cantidadContador {
+  font-size: 4rem;
+}
+
+.BotonTienda {
+  display: inline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0.5rem;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+}
+
+.BotonTienda h4, .BotonTienda h3 {
+  color: white;
+  font-size: 1rem;
+  margin: 0.2rem;
+}
+
+.BotonTienda a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=contador.css.map */

@@ -54,7 +54,7 @@ const Cart = () => {
             <h2>Aun no hay productos seleccionados</h2>
             <button className="BotonTienda" onClick={clearCart}> 
                     
-            <NavLink to="/">Ir a comprar</NavLink>
+            <NavLink to="/tienda">Ir a comprar</NavLink>
 
             </button>
                 
@@ -76,7 +76,7 @@ const Cart = () => {
             <h3>Precio total del carrito: ${total}</h3>
             <div>
                 <button className="BotonTienda">
-                    <NavLink to="/">Seguir comprando</NavLink>
+                    <NavLink to="/tienda">Seguir comprando</NavLink>
                 </button>
             </div>
             

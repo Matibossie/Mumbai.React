@@ -23,20 +23,20 @@ const [cantidad, setCantidad] = useState(initial)
     return (
         <div className="contenedor text-center">
             <div className="producto">
-                <h6>Categoría: {item.categoryId}</h6>
-                <h2>{item.name}</h2>
-                <h3>${item.price}</h3>
                 <img src={item.image} alt=""/>
-                <h6>{item.description}</h6>
             </div>    
-            <div>
+            <div className="preCompra">
+                <h2>{item.name}</h2>
+                <h6>Categoría: {item.categoryId}</h6>
+                <h3>${item.price}</h3>
+                <h5>{item.description}</h5>
                 <Contador 
-                    stock={item.stock} 
-                    initial={initial} 
-                    aumentarContador={aumentarContador}
-                    restarContador={restarContador}
-                    cantidad={cantidad}
-                    item={item}
+                        stock={item.stock} 
+                        initial={initial} 
+                        aumentarContador={aumentarContador}
+                        restarContador={restarContador}
+                        cantidad={cantidad}
+                        item={item}
                 />
             </div>
 

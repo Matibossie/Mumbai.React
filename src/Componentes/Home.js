@@ -7,11 +7,22 @@ const Home = ({Nombre}) => {
         <>
         
             <div className="encabezado">
-                <h2 className="text-center"><b>¡Hola {Nombre}!</b> <br/>Te invitamos a ver nuestros Productos</h2>
+                <h2 className="text-center"><b>¡BIENVENIDO!</b> <br/>Te invitamos a ver nuestros Productos</h2>
             </div> 
             <section className="contenedor">
+
+
+
+
+
+
+
+
+
+
+
             <div className="boton">
-                <NavLink to="/catalogo" className="titulos">Acceder al catálogo completo</NavLink>
+                <NavLink to="/tienda" className="titulos">Acceder al catálogo completo</NavLink>
             </div>	
             <div className="sobre-nosotros">
                 <div className="foto-sobre-nosotros foto-sobre-nosotros-index">

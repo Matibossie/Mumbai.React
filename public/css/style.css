@@ -11,6 +11,7 @@
 }
 .ImagenItem{
   position: relative;
+  width: 75%;
 }
 .EliminarItem{
   position: absolute;
@@ -55,15 +56,6 @@ button.botonContador{
   outline: none;
 }
 
-.SumaCarro{
-  background: red;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  color: white;
-  justify-content: center;
-  font-weight: bold;
-}
 
 
 /** SLIDER TIENDA **/

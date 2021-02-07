@@ -55,10 +55,10 @@ return(
         <BrowserRouter>
             <Header />
             <Switch> 
-                <Route exact path="/Home"  >
-                    <Home Nombre = "Horacio"/>
+                <Route exact path="/home"  >
+                    <Home/>
                 </Route>
-                <Route exact path="/" >
+                <Route exact path="/tienda" >
                     <Tienda products={items} />
                 </Route>
                 <Route exact path="/category/:id" >

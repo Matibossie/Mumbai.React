@@ -5,20 +5,18 @@ function CartItem( { id, name, image, price, amount }) {
     const { eliminateFromCart } = useContext(CartContext)
 
     return (
-        <div className="BloqueItems">
+        <div className="BloqueItems flex">
             <div>    
                 <img className="ImagenItem" src={image} alt={name} />
                 <button className="EliminarItem" onClick={ () => eliminateFromCart(id )} >
                     X
                 </button>
             </div>
-            <div>    
-                <h5>Producto: {name}</h5>
-                <h6>Precio ${price}</h6>
-                <h6>Cantidad: {amount}</h6>
+            <div className="preCompra">    
+                <h3>Producto: {name}</h3>
+                <h4>Precio ${price}</h4>
+                <h5>Cantidad: {amount}</h5>
                 <h6>Sub Total ${amount * price}</h6>
-            
-                
             </div>
         </div>
     )
